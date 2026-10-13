@@ -302,6 +302,18 @@
   .thumbs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
   .thumbs .img { aspect-ratio: 4 / 3; }
   .thumbs .img span { font-size: 0.58rem; }
+  .desc { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .highlights { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 0.9rem; color: var(--muted); }
+  .highlights b { color: var(--text); font-weight: 600; }
+  .shot {
+    display: block; width: 100%; height: auto;
+    object-fit: cover; object-position: top;
+    border-radius: 6px; border: 1px solid var(--line);
+    transition: border-color 0.2s;
+  }
+  a:hover > .shot { border-color: var(--cobalt-hi); }
+  .thumbs.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .thumbs .shot { aspect-ratio: 16 / 10; }
   .project-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
   .slot {
     border: 1px dashed var(--ph-border); border-radius: 10px;
@@ -491,7 +503,9 @@
         </article>
 
         <article class="project">
-          <div class="img hero-img"><span>Cover image · custom card set in-game</span></div>
+          <a href="images/blockugan-about.png" target="_blank" rel="noopener">
+          <img class="shot hero-img" src="images/blockugan-about.png" alt="Blockugan website About page">
+          </a>
           <div>
             <h3>Blockugan Minecraft Mod</h3>
             <p class="meta">Sep 2026 – Present · Solo/Team project · Minecraft Java Edition</p>
@@ -503,7 +517,12 @@
             <div class="bars"><span style="width:100%"></span><span style="width:90%"></span><span style="width:46%"></span></div>
           </div>
           <div class="thumbs">
-            <div class="img"><span>Website homepage</span></div>
+            <a href="images/blockugan-home.png" target="_blank" rel="noopener">
+              <img class="shot" src="images/blockugan-home.png" alt="Blockugan website homepage">
+            </a>
+            <a href="images/blockugan-survey.png" target="_blank" rel="noopener">
+              <img class="shot" src="images/blockugan-survey.png" alt="Blockugan player survey page">
+            </a>
           </div>
           <div class="project-foot">
             <ul class="tags"><li>Astro</li><li>HTML</li><li>Java</li><li>Blockbench</li></ul>
