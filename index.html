@@ -316,6 +316,9 @@
   .thumbs .shot { aspect-ratio: 16 / 10; }
   .project-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
   .project-foot .tags { flex: 1; justify-content: space-evenly; }
+  .project .shot.diagram { aspect-ratio: auto; object-fit: contain; background: #fff; padding: 8px; }
+  .fig { margin: 0; display: grid; gap: 6px; }
+  .fig figcaption { font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
   .slot {
     border: 1px dashed var(--ph-border); border-radius: 10px;
     padding: 22px; display: grid; gap: 4px; place-items: center; text-align: center;
@@ -483,30 +486,30 @@
 
       <div class="projects">
         <article class="project">
-          <a href="images/network-logical.png" target="_blank" rel="noopener">
-            <img class="shot hero-img" src="images/network-logical.png" alt="Logical network diagram for the nonprofit network design">
-          </a>
+          <figure class="fig">
+            <a href="images/network-logical.png" target="_blank" rel="noopener">
+              <img class="shot diagram" src="images/network-logical.png" alt="Logical network diagram showing VLAN segmentation for a 45-person nonprofit">
+            </a>
+            <figcaption>Logical topology · VLANs and IP addressing</figcaption>
+          </figure>
           <div>
             <h3>Senior Networking Project</h3>
             <p class="meta">Dec 2025 · Team project · Intro to Networks &amp; Telecommunications</p>
           </div>
-          <p class="desc">A complete network infrastructure designed for a 45-person nonprofit. Our team planned the network from the ground up, segmenting it with VLANs and private IP addressing, writing the security and disaster recovery policies, and delivering diagrams, a mockup database, and a full budget.</p>
+          <p class="desc">A complete network infrastructure designed for a 45-person nonprofit. I created the team's logical and physical network diagrams and wrote the network security and disaster recovery policies, while the team also delivered a mockup database and a full budget.</p>
           <ul class="highlights">
-            <li><b>Network design:</b> VLAN segmentation, a private IP addressing scheme, and standardized device naming conventions.</li>
-            <li><b>Security:</b> role-based access control, multi-factor authentication, and encrypted backups.</li>
-            <li><b>Business continuity:</b> a disaster recovery plan built around a cloud-based warm site.</li>
-            <li><b>Deliverables:</b> logical and physical network diagrams, a mockup database, and a budget with a full bill of materials.</li>
+            <li><b>Network diagrams:</b> logical and physical topologies covering VLAN segmentation, private IP addressing, and standardized device naming.</li>
+            <li><b>Security policy:</b> role-based access control, multi-factor authentication, and encrypted backups.</li>
+            <li><b>Disaster recovery policy:</b> business continuity built around a cloud-based warm site.</li>
           </ul>
-          <div class="thumbs two">
+          <figure class="fig">
             <a href="images/network-physical.png" target="_blank" rel="noopener">
-              <img class="shot" src="images/network-physical.png" alt="Physical network diagram">
+              <img class="shot diagram" src="images/network-physical.png" alt="Physical network diagram showing device placement and cabling">
             </a>
-            <a href="images/network-budget.png" target="_blank" rel="noopener">
-              <img class="shot" src="images/network-budget.png" alt="Project budget and bill of materials">
-            </a>
-          </div>
+            <figcaption>Physical layout · device placement and connections</figcaption>
+          </figure>
           <div class="project-foot">
-            <ul class="tags"><li>VLANs</li><li>IP addressing</li><li>RBAC</li><li>MFA</li><li>Disaster recovery</li></ul>
+            <ul class="tags"><li>VLANs</li><li>IP addressing</li><li>Network diagrams</li><li>RBAC</li><li>MFA</li><li>Disaster recovery</li></ul>
           </div>
         </article>
 
