@@ -258,6 +258,7 @@
   }
   .featured:hover { border-color: var(--cobalt); }
   .featured .img { aspect-ratio: 4 / 3; }
+  .featured .feat-img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border-radius: 6px; border: 1px solid var(--line); background: #fff; }
   .featured h3 { margin: 0 0 4px; font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; }
   .featured p { margin: 0; color: var(--muted); font-size: 0.9rem; }
   .arrow { color: var(--cobalt-hi); font-family: var(--f-mono); }
@@ -428,7 +429,7 @@
       </div>
 
       <a class="featured" href="#portfolio">
-        <div class="img"><span>Network topology diagram</span></div>
+        <img class="feat-img" src="images/network-logical.png" alt="Logical network diagram from the Senior Networking Project">
         <div>
           <p class="ph-label" style="margin-bottom:6px">Featured work</p>
           <h3>Senior Networking Project</h3>
@@ -537,7 +538,7 @@
                 <h4>Protocols</h4>
                 <ul class="tags"><li>TCP</li><li>UDP</li><li>SSH/TLS</li><li>LDAP</li><li>Kerberos</li><li>DNS</li></ul>
                 <h4>Naming convention</h4>
-                <p class="policy-note"><code>DEVICE-DEPARTMENT-##</code> for quick identification. Example: <code>PC-IT-01</code></p>
+                <p class="policy-note"><code>DEVICE-DEPARTMENT-##</code> for quick identification.<br>Example: <code>PC-IT-01</code></p>
               </div>
             </div>
           </div>
