@@ -319,6 +319,18 @@
   .project .shot.diagram { aspect-ratio: auto; object-fit: contain; background: #fff; padding: 8px; }
   .fig { margin: 0; display: grid; gap: 6px; }
   .fig figcaption { font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+  .policy { border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 12px; background: rgba(0,71,171,0.06); }
+  .policy-title { margin: 0; font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cobalt-hi); }
+  .policy-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; }
+  .policy-col { display: grid; gap: 10px; align-content: start; min-width: 0; }
+  .policy h4 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
+  .vlan { width: 100%; border-collapse: collapse; font-family: var(--f-mono); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+  .vlan th { text-align: left; color: var(--muted); font-weight: 500; padding: 4px 8px 6px 0; border-bottom: 1px solid var(--line); }
+  .vlan td { padding: 5px 8px 5px 0; border-bottom: 1px solid rgba(27,36,54,0.6); }
+  .vlan td:first-child { color: var(--cobalt-hi); }
+  .policy-note { margin: 0; font-size: 0.85rem; color: var(--muted); }
+  .policy code { font-family: var(--f-mono); font-size: 0.8rem; color: var(--text); background: rgba(0,71,171,0.2); padding: 1px 6px; border-radius: 3px; }
+  @media (max-width: 560px) { .policy-grid { grid-template-columns: 1fr; } }
   .slot {
     border: 1px dashed var(--ph-border); border-radius: 10px;
     padding: 22px; display: grid; gap: 4px; place-items: center; text-align: center;
@@ -502,6 +514,33 @@
             <li><b>Security policy:</b> role-based access control, multi-factor authentication, and encrypted backups.</li>
             <li><b>Disaster recovery policy:</b> business continuity built around a cloud-based warm site.</li>
           </ul>
+          <div class="policy">
+            <p class="policy-title">Network policies</p>
+            <div class="policy-grid">
+              <div class="policy-col">
+                <h4>Segmentation</h4>
+                <table class="vlan">
+                  <thead><tr><th>VLAN</th><th>Purpose</th><th>Subnet</th></tr></thead>
+                  <tbody>
+                    <tr><td>10</td><td>Admin</td><td>10.10.10.0/24</td></tr>
+                    <tr><td>20</td><td>Staff</td><td>10.10.20.0/24</td></tr>
+                    <tr><td>30</td><td>Volunteer / Guest</td><td>10.10.30.0/24</td></tr>
+                    <tr><td>40</td><td>Wireless</td><td>10.10.40.0/24</td></tr>
+                    <tr><td>70</td><td>VoIP</td><td>10.10.70.0/24</td></tr>
+                    <tr><td>80</td><td>IoT</td><td>10.10.80.0/24</td></tr>
+                    <tr><td>90</td><td>Management</td><td>10.10.90.0/24</td></tr>
+                  </tbody>
+                </table>
+                <p class="policy-note">Private block <code>10.10.0.0/16</code>, split into one /24 per VLAN using <code>10.10.VLAN.0/24</code>.</p>
+              </div>
+            <div class="policy-col">
+                <h4>Protocols</h4>
+                <ul class="tags"><li>TCP</li><li>UDP</li><li>SSH/TLS</li><li>LDAP</li><li>Kerberos</li><li>DNS</li></ul>
+                <h4>Naming convention</h4>
+                <p class="policy-note"><code>DEVICE-DEPARTMENT-##</code> for quick identification. Example: <code>PC-IT-01</code></p>
+              </div>
+            </div>
+          </div>
           <figure class="fig">
             <a href="images/network-physical.png" target="_blank" rel="noopener">
               <img class="shot diagram" src="images/network-physical.png" alt="Physical network diagram showing device placement and cabling">
