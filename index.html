@@ -333,6 +333,7 @@
   .vlan td:first-child { color: var(--cobalt-hi); }
   .policy-note { margin: 0; font-size: 0.85rem; color: var(--muted); }
   .policy code { font-family: var(--f-mono); font-size: 0.8rem; color: var(--text); background: rgba(0,71,171,0.2); padding: 1px 6px; border-radius: 3px; }
+  .config { margin: 0; font-family: var(--f-mono); font-size: 0.8rem; line-height: 1.7; color: var(--text); white-space: pre; overflow-x: auto; }
   @media (max-width: 560px) { .policy-grid { grid-template-columns: 1fr; } }
   .slot {
     border: 1px dashed var(--ph-border); border-radius: 10px;
@@ -569,6 +570,33 @@
           <div class="project-foot">
             <ul class="tags"><li>Astro</li><li>HTML</li><li>Java</li><li>Blockbench</li></ul>
             <a class="btn ghost" href="https://blockugan.com" target="_blank" rel="noopener">Visit site <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div>
+            <h3>Dedicated Game Server Administration</h3>
+            <p class="meta">May 2026 · Independent project · Hosted ARK: Survival Evolved server (Nitrado)</p>
+          </div>
+          <p class="desc">I set up and administer a hosted dedicated server for a small group of players. I planned the server's configuration, managed a 35-mod load order based on dependencies, and tuned the server through its INI configuration files, troubleshooting mod conflicts along the way.</p>
+          <ul class="highlights">
+            <li><b>Configuration management:</b> edited GameUserSettings.ini and Game.ini directly, recording only values changed from defaults so the configuration stays readable and easy to audit.</li>
+            <li><b>Dependency management:</b> ordered 35 mods so framework mods load before the mods that rely on them, and removed redundant or conflicting mods.</li>
+            <li><b>Troubleshooting:</b> corrected misidentified mods by verifying Workshop IDs, and resolved an item-recognition conflict between two mods with a configuration override.</li>
+          </ul>
+          <div class="policy">
+            <p class="policy-title">Config excerpt · GameUserSettings.ini</p>
+            <pre class="config">[ServerSettings]
+              DifficultyOffset=1.0
+              OverrideOfficialDifficulty=5.0
+              HarvestAmountMultiplier=4.0
+              TamingSpeedMultiplier=5.0
+              XPMultiplier=3.0
+              DayTimeSpeedScale=0.7
+              NightTimeSpeedScale=1.5</pre>
+            </div>
+          <div class="project-foot">
+            <ul class="tags"><li>Server administration</li><li>INI configuration</li><li>Dependency management</li><li>Troubleshooting</li></ul>
           </div>
         </article>
 
