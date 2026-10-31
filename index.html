@@ -603,6 +603,39 @@
           </div>
         </article>
 
+        <article class="project">
+          <div>
+            <h3>Custom Workstation Build &amp; Windows 11 Deployment</h3>
+            <p class="meta">Nov 2024 – May 2025 · Independent project · Custom desktop PC</p>
+          </div>
+          <p class="desc">I planned and built a custom desktop PC, then deployed Windows 11 on it after the original installation failed to boot. Along the way I diagnosed display, boot, and stability problems, and brought the system to a working state without losing existing data.</p>
+          <ul class="highlights">
+            <li><b>Hardware build:</b> selected compatible components (LGA1700 CPU, Z790 DDR5 motherboard), assembled the system, planned airflow around a 240mm AIO cooler, and upgraded to an 850W ATX 3.0 power supply to support the GPU.</li>
+            <li><b>Diagnostics:</b> used the motherboard's Q-LED indicators to troubleshoot a no-display boot, accounting for the CPU having no integrated graphics.</li>
+            <li><b>Firmware:</b> diagnosed a BIOS compatibility issue between the CPU and motherboard and identified the firmware update needed. With no compatible CPU on hand to boot the board for flashing, I had a repair shop apply the update.</li>
+            <li><b>OS deployment:</b> investigated boot error 0xc000000e and UEFI/CSM settings on the original drive, then installed Windows 11 on a new NVMe drive from USB media, completing setup offline with <code>OOBE\BYPASSNRO</code> when network drivers were missing, while preserving the data on the original drive.</li>
+            <li><b>Stability:</b> traced crashes across several games to RAM overclocked beyond what the CPU's memory controller supports.</li>
+          </ul>
+          <div class="policy">
+            <p class="policy-title">System specs</p>
+            <table class="vlan">
+              <tbody>
+                <tr><td>CPU</td><td>Intel Core i9-12900KF</td></tr>
+                <tr><td>Motherboard</td><td>ASUS TUF Gaming Z790-Pro WiFi</td></tr>
+                <tr><td>Memory</td><td>DDR5-6400</td></tr>
+                <tr><td>GPU</td><td>PowerColor Red Dragon RX 6800 16GB</td></tr>
+                <tr><td>Storage</td><td>Samsung 990 EVO Plus 2TB NVMe + SATA SSD</td></tr>
+                <tr><td>Power</td><td>Corsair RM850e 850W 80+ Gold</td></tr>
+                <tr><td>Cooling</td><td>Cooler Master MasterLiquid ML240L V2</td></tr>
+                <tr><td>Case</td><td>Cooler Master MasterBox TD500 Mesh V2</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="project-foot">
+            <ul class="tags"><li>Hardware assembly</li><li>BIOS/UEFI</li><li>Windows 11 deployment</li><li>Troubleshooting</li></ul>
+          </div>
+        </article>
+
         <div class="slot">
           <b>Open port</b>
           <p>Reserved slot for the next project or artifact.</p>
