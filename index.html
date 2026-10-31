@@ -333,8 +333,9 @@
   .vlan td:first-child { color: var(--cobalt-hi); }
   .policy-note { margin: 0; font-size: 0.85rem; color: var(--muted); }
   .policy code { font-family: var(--f-mono); font-size: 0.8rem; color: var(--text); background: rgba(0,71,171,0.2); padding: 1px 6px; border-radius: 3px; }
-  .config { margin: 0; font-family: var(--f-mono); font-size: 0.8rem; line-height: 1.7; color: var(--text); white-space: pre; overflow-x: auto; }
-  @media (max-width: 560px) { .policy-grid { grid-template-columns: 1fr; } }
+  .config { display: grid; gap: 2px; font-family: var(--f-mono); font-size: 0.8rem; line-height: 1.7; color: var(--text); overflow-x: auto; }
+  .config span { white-space: nowrap; }
+  .config .cfg-section { color: var(--cobalt-hi); }  @media (max-width: 560px) { .policy-grid { grid-template-columns: 1fr; } }
   .slot {
     border: 1px dashed var(--ph-border); border-radius: 10px;
     padding: 22px; display: grid; gap: 4px; place-items: center; text-align: center;
